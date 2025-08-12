@@ -1,0 +1,150 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #061122 0%, #071827 60%);
+  overflow: hidden;
+}
+
+#canvas-holder {
+  position: fixed;
+  inset: 0;
+}
+
+#overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#ui {
+  width: 340px;
+  padding: 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
+  color: #e6eef6;
+  pointer-events: auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.small {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+label.muted {
+  display: block;
+  margin: 10px 0 5px;
+  opacity: 0.6;
+}
+
+select, button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: inherit;
+  font-size: 1em;
+}
+
+button.ghost {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+#start-tip {
+  font-size: 0.8em;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+#footer {
+  font-size: 0.75em;
+  opacity: 0.4;
+  margin-top: 15px;
+  text-align: center;
+}
+
+#hud {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(3, 6, 12, 0.6);
+  color: #dff6fb;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+#message {
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+#mobile-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+#joystick-container {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  position: relative;
+  pointer-events: auto;
+}
+
+#joystick {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transition: top 0.05s, left 0.05s;
+}
+
+#action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: auto;
+}
+
+.action-btn {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: none;
+}
