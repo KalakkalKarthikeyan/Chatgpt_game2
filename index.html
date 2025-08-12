@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Maze — Find the Cat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game Canvas -->
+  <div id="canvas-holder"></div>
+
+  <!-- Overlay UI -->
+  <div id="overlay">
+    <div id="ui">
+      <h1>Find the Cat — 3D Maze</h1>
+      <p class="small">Click Start, lock pointer (desktop) or use buttons (mobile) to move. Find the cat to win. Avoid monsters.</p>
+      
+      <label class="muted">Difficulty</label>
+      <select id="difficulty">
+        <option value="easy">Easy (11×11)</option>
+        <option value="medium" selected>Medium (21×21)</option>
+        <option value="hard">Hard (31×31)</option>
+      </select>
+      
+      <div class="row">
+        <button id="startBtn">Start Game</button>
+        <button id="resetBtn" class="ghost">Reset</button>
+      </div>
+      
+      <div id="start-tip">Desktop: Click game to lock pointer, use WASD. Mobile: Use on-screen controls.</div>
+      <div id="footer">Made for GitHub Pages • Mobile friendly</div>
+    </div>
+  </div>
+
+  <!-- HUD -->
+  <div id="hud">
+    Health: <span id="health">100</span> | Time: <span id="time">0</span>s
+  </div>
+
+  <!-- Win/Lose Message -->
+  <div id="message" style="display:none"></div>
+
+  <!-- Mobile Controls -->
+  <div id="mobile-controls">
+    <div id="joystick-container">
+      <div id="joystick"></div>
+    </div>
+    <div id="action-buttons">
+      <button id="lookLeft" class="action-btn">⟲</button>
+      <button id="lookRight" class="action-btn">⟳</button>
+      <button id="jumpBtn" class="action-btn">⤒</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="main.js"></script>
+</body>
+</html>
